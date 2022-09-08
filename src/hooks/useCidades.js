@@ -6,7 +6,6 @@ export const useCidades = ({ uf }) => {
 
     useEffect(() => {
         if (!uf) return;
-
         setLoading(true);
         fetch(`https://brasilapi.com.br/api/ibge/municipios/v1/${uf}`)
             .then((response) => response.json())
