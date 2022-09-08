@@ -34,7 +34,7 @@ export const CardClima = ({temperatura, vento, umidade, sensacao, data, descrica
                     style={{ width: "5", height: "5" }}
                     src="vento.svg"
                 ></img>
-                <div className="vento">Vel. do vento: {vento} km</div>
+                <div className="vento">Vel. do vento: {vento} km/h</div>
             </div>
         </div>
     );
