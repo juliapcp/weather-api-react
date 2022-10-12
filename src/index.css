@@ -19,7 +19,7 @@ html {
 
 body {
   background: #eee;
-  background: linear-gradient(0deg, rgba(0, 0, 200, 0.2), rgba(0, 0, 200, 0));
+  background: linear-gradient(200deg, rgba(0, 0, 200, 0.2), rgba(0, 0, 200, 0));
 }
 
 .background {
@@ -65,6 +65,21 @@ body {
   position: relative;
 }
 
+.chart {
+  box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding: 25px;
+  min-height: 300px;
+  margin-left: 10%;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
 #card .details {
   position: absolute;
   top: 0;
@@ -105,7 +120,7 @@ body {
   margin-left: 5px;
 }
 
-.weather {
+.weather, .chart {
   background-color: #dae3fd;
   transition: background-color 2s ease;
 }
@@ -160,64 +175,4 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-.checkbox {
-  display: none;
-}
-
-.checkbox+label {
-  display: inline-block;
-  margin-top: 1vh;
-  margin-left: 198vh;
-  position: relative;
-  text-align: right;
-  width: 90px;
-  height: 40px;
-  background: linear-gradient(to right,
-      #e70703 0,
-      #ece3e5 45%,
-      #0261ce 54%,
-      rgb(206, 99, 99) 100%) 0 0;
-  background-size: 650px 100%;
-  border-radius: 70px;
-  padding: 7px;
-  cursor: pointer;
-  transition: all 500ms ease;
-  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.2) inset;
-}
-
-.checkbox+label:before {
-  content: "TR";
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  left: 5px;
-  top: 4px;
-  border-radius: 100%;
-  background: #fff;
-  text-align: center;
-  z-index: 10;
-  line-height: 34px;
-  font-family: "Cabin", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #ff0400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: left 500ms ease, color 500ms ease, transform 150ms ease;
-}
-
-.checkbox+label:active:before {
-  transform: scale(0.95);
-}
-
-.checkbox:checked+label {
-  background-position-x: -350px;
-}
-
-.checkbox:checked+label:before {
-  content: "EN";
-  color: #007177;
-  left: 54px;
 }
